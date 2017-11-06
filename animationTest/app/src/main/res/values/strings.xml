@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">animationTest</string>
+    <string name="start_text">Start</string>
+    <string name="stop_text">Stop</string>
+    <string name="alpha_text">alpha</string>
+    <string name="rolate_text">rolate</string>
+    <string name="scale_text">scale</string>
+    <string name="translate_text">translate</string>
+    <string name="drawable">drawable</string>
+</resources>
