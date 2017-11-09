@@ -77,8 +77,8 @@
         android:text="@string/stop_text"
         android:layout_below="@id/start"/>
 
-    <com.zly.activity.MyAnimView
+<!--    <com.zly.activity.MyAnimView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/stop"/>
+        android:layout_below="@id/stop"/>-->
 </RelativeLayout>
