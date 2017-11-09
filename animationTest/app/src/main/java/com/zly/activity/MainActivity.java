@@ -65,6 +65,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate (savedInstanceState);
         setContentView (R.layout.activity_main);
+        android.util.Log.d("zly", "zly --> test");
         initView();
         initData();
     }
@@ -213,5 +214,5 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             return (float) (Math.pow(2, -10 * input) * Math.sin((input - factor / 4) * (2 * Math.PI) / factor) + 1);
         }
     }
-
+ 
 }
