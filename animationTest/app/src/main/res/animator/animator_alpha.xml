@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<objectAnimator xmlns:android="http://schemas.android.com/apk/res/android"
+    android:propertyName="scaleX"
+    android:duration="500"
+    android:repeatCount="1"
+    android:repeatMode="restart"
+    android:startOffset="100"
+    android:valueTo="180.0"
+    android:valueType="floatType"
+/>
+
+<!-- 这里的propertyName控制着对象是进行哪种方式动画 X:左右移动，Y：上下移动，alpha： 透明度，rotation: 旋转， scaleX: 缩放X坐标，scaleY: 缩放Y坐标 -->

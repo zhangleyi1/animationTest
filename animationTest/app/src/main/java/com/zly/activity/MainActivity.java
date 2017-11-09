@@ -1,6 +1,9 @@
 package com.zly.activity;
 
+import android.animation.Animator;
+import android.animation.AnimatorInflater;
 import android.animation.AnimatorSet;
+import android.animation.ObjectAnimator;
 import android.animation.TypeEvaluator;
 import android.animation.ValueAnimator;
 import android.content.Context;
@@ -161,6 +164,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 animationSet.addAnimation (mAlphaAnimation);
                 animationSet.addAnimation (mTranslateAnimation);
                 mImageView.startAnimation(animationSet);*/
+
+                propertyAnimation();
                 break;
             case R.id.stop:
                 if (mRadioGroupTwo.getCheckedRadioButtonId () == R.id.drawable) {
@@ -214,5 +219,25 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             return (float) (Math.pow(2, -10 * input) * Math.sin((input - factor / 4) * (2 * Math.PI) / factor) + 1);
         }
     }
- 
+
+    /**
+     * 属性动画：对图片进行透明度的变化
+     * */
+    private void propertyAnimation() {
+        boolean useXmlFlag = true;
+        if (useXmlFlag) {
+            //one way:
+            Animator animator = AnimatorInflater.loadAnimator(MainActivity.this, R.animator.animator_alpha);
+            animator.setTarget(mImageView);
+            animator.start();
+        } else {
+            //two way:
+            ObjectAnimator alphaAniamtion = ObjectAnimator.ofFloat(mImageView, "alpha", 1.0f, 0.0f);
+//            alphaAniamtion.setFrameDelay(1000);
+            alphaAniamtion.setDuration(5000);
+            alphaAniamtion.setRepeatCount(1);
+            alphaAniamtion.setRepeatMode(ValueAnimator.REVERSE);
+            alphaAniamtion.start();
+        }
+    }
 }

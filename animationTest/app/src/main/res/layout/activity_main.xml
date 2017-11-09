@@ -7,20 +7,12 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.zly.activity.MainActivity">
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/picture"
-        android:layout_centerHorizontal="true"
-        android:src="@mipmap/picture"/>
-
     <RadioGroup
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center"
-        android:id="@+id/radioGroupOne"
-        android:layout_below="@id/picture">
+        android:id="@+id/radioGroupOne" >
 
 
         <RadioButton
@@ -81,4 +73,12 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/stop"/>-->
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:id="@+id/picture"
+        android:layout_below="@id/stop"
+        android:layout_centerHorizontal="true"
+        android:background="@mipmap/ic_picture_animotion"/>
 </RelativeLayout>
